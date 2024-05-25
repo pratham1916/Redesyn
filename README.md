@@ -1,5 +1,6 @@
 # Redesyn - Assignment
 
+
 ~~~
 Redesyn/
   ├─ public/
@@ -14,6 +15,9 @@ Redesyn/
     └─  package-lock.json
             └─ package.json
 ~~~
+## Preview Images
+![Screenshot 2024-05-25 150713](https://github.com/pratham1916/Redesyn/assets/120631770/c28774a4-d4f4-44f1-9f01-09710d90b83f)
+
 
 ## Tech Stack
 This section lists the technologies used in this project. Detail each technology used for the frontend
