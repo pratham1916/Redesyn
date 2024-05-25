@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-container {
+  width: 390px;
+  height: 844px;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.rectangle {
+  position: relative;
+  width: 390px;
+  height: 315px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+}
+
+.rectangle img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  z-index: 1;
+}
+
+.rectangle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgb(255, 255, 255), transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.status-bar {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  gap: 220px;
+  justify-content: space-between;
+  padding: 14.182px 25.715px 6.182px 35.605px;
+  align-items: center;
+  top: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.status-bar-right {
+  display: flex;
+  gap: 5px;
+}
+
+.profile-header {
+  position: absolute;
+  z-index: 3;
+  top: 45px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0 19.17px 20px;
+}
+
+.profile-header div {
+  display: flex;
+  align-items: center;
+}
+
+.profile-header-1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-header-2 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #FFF;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.profile-header-3 {
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 22px;
+}
+
+.profile-info {
+  position: absolute;
+  height: 122px;
+  width: 390px;
+  top: 200px;
+  padding: 2px 0 26px 20px;
+  display: flex;
+  z-index: 5;
+  background: linear-gradient(to top, rgb(255, 255, 255), transparent 100%);
+}
+
+.profile-info::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgb(255, 255, 255), transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.profile-info-1 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+.profile-info-image {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: circle(50%);
+  z-index: 4;
+}
+
+.profile-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 94px;
+  height: 94px;
+}
+
+.profile-info-2 {
+  width: 240px;
+  height: 62px;
+  margin: 31px 16px 29px;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0 19px 18px;
+  z-index: 5;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.value .social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.value p {
+  color: #AB1AA1;
+  text-align: center;
+  font-family: "Domaine Display";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.title-sub {
+  color: #6a6a6a;
+  font-family: "Sharp Grotesk";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile-bio {
+  padding: 10px 30px;
+}
+
+.profile-bio-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-bio-1 h1 {
+  font-size: 14px;
+  color: #592EBF;
+}
+
+.follow-btn {
+  text-decoration: none;
+  display: flex;
+  width: 116px;
+  height: 28px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #592EBF;
+  box-shadow: 2px 2px 0px 0px #AB1AA1;
+  color: white;
+  font-family: "Sharp Grotesk";
+}
+
+.digital-creator {
+  color: #4971FD;
+  font-family: "Sharp Grotesk";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about {
+  color: #1A3365;
+  font-family: "Sharp Grotesk";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+  margin-top: 10px;
+}
+
+.profile-gallery-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+}
+
+.icon-container {
+  position: relative;
+  padding: 13px 54px;
+}
+
+.icon-container:first-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #592EBF;
+}
+
+.menu-icons {
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 31px 30px;
+}
+
+.menu-icon-container p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Sharp Grotesk";
+  font-size: 12px;
+}
