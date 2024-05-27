@@ -7,11 +7,24 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .App-container {
   width: 390px;
   height: 844px;
   margin: auto;
   border-radius: 25px;
+  overflow: hidden;
 }
 
 .rectangle {
@@ -240,10 +253,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: 13px;
-  margin-top: 10px;
+  margin-top
+  : 10px;
 }
 
 .profile-gallery-icons {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -275,6 +290,8 @@
   justify-content: space-between;
   background-color: black;
   padding: 31px 30px;
+  cursor: pointer; 
+  transition: transform 0.3s ease; 
 }
 
 .menu-icon-container p {
@@ -284,12 +301,41 @@
   font-size: 12px;
 }
 
+.menu-icon-container svg {
+  transition: background-color 0.1s ease;
+}
+
+.menu-icon-container.active svg {
+  background-color: #592EBF;
+}
+
+.menu-icons:active {
+  animation: bounce 0.1s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .gallery-container {
   margin-top: 6px;
+  height: calc(100vh - 530px);
+  overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Change 200px to your desired image width */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 2px;
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none;
 }
 
 .gallery-image {
